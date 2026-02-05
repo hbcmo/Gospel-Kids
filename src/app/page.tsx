@@ -60,7 +60,7 @@ const ManScene = () => (
 
 // Cross as bridge
 const JesusScene = () => (
-  <svg viewBox="0 0 320 180" className="w-full max-w-2xl mx-auto mb-6">
+  <svg viewBox="0 0 320 240" className="w-full max-w-2xl mx-auto mb-6">
     <g stroke="#111827" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path d="M 0 120 L 110 120 L 140 160 L 0 160 Z" />
       <path d="M 210 120 L 320 120 L 320 160 L 180 160 Z" />
@@ -74,15 +74,15 @@ const JesusScene = () => (
         <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
       </path>
     </g>
-    <text x="30" y="112" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
-    <text x="260" y="112" fontFamily="serif" fontSize="12" fill="#111827">God</text>
-    <text x="138" y="152" fontFamily="serif" fontSize="12" fill="#111827">Jesus</text>
+    <text x="30" y="120" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
+    <text x="260" y="120" fontFamily="serif" fontSize="12" fill="#111827">God</text>
+    <text x="138" y="168" fontFamily="serif" fontSize="12" fill="#111827">Jesus</text>
   </svg>
 );
 
 // Cross bridge with person walking
 const InvitationScene = () => (
-  <svg viewBox="0 0 320 180" className="w-full max-w-2xl mx-auto mb-6">
+  <svg viewBox="0 0 320 240" className="w-full max-w-2xl mx-auto mb-6">
     <g stroke="#111827" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path d="M 0 120 L 110 120 L 140 160 L 0 160 Z" />
       <path d="M 210 120 L 320 120 L 320 160 L 180 160 Z" />
@@ -103,14 +103,14 @@ const InvitationScene = () => (
       <path d="M 20 34 L 28 48" />
       <animateTransform attributeName="transform" type="translate" values="208,58; 208,60; 208,58" dur="2s" repeatCount="indefinite" />
     </g>
-    <text x="30" y="112" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
-    <text x="260" y="112" fontFamily="serif" fontSize="12" fill="#111827">God</text>
+    <text x="30" y="120" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
+    <text x="260" y="120" fontFamily="serif" fontSize="12" fill="#111827">God</text>
   </svg>
 );
 
 // Praying person
 const PrayerScene = () => (
-  <svg viewBox="0 0 320 180" className="w-full max-w-2xl mx-auto mb-6">
+  <svg viewBox="0 0 320 240" className="w-full max-w-2xl mx-auto mb-6">
     <g stroke="#111827" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path d="M 0 120 L 110 120 L 140 160 L 0 160 Z" />
       <path d="M 210 120 L 320 120 L 320 160 L 180 160 Z" />
@@ -132,8 +132,8 @@ const PrayerScene = () => (
       <path d="M 20 34 L 28 48" />
       <animateTransform attributeName="transform" type="translate" values="60,58; 60,60; 60,58" dur="2s" repeatCount="indefinite" />
     </g>
-    <text x="30" y="112" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
-    <text x="260" y="112" fontFamily="serif" fontSize="12" fill="#111827">God</text>
+    <text x="30" y="120" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
+    <text x="260" y="120" fontFamily="serif" fontSize="12" fill="#111827">God</text>
   </svg>
 );
 
