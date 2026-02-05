@@ -7,8 +7,8 @@ type Stage = 'intro' | 'god' | 'man' | 'jesus' | 'invitation' | 'prayer';
 
 const PreacherAvatar = () => (
   <img
-    src="/images/Jeremy.png.png"
-    alt="Jeremy"
+    src="/images/Charles-kids.png"
+    alt="Charles"
     className="mx-auto mb-6 w-32 h-auto"
   />
 );
@@ -29,7 +29,7 @@ const GodScene = () => (
       <animateTransform attributeName="transform" type="translate" values="100,70; 100,72; 100,70" dur="2s" repeatCount="indefinite" />
     </g>
     <text x="60" y="110" fontFamily="serif" fontSize="16" fill="#111827" fontWeight="bold">😊</text>
-    <text x="100" y="155" fontFamily="serif" fontSize="12" fill="#111827" opacity="0.6">Good Friends</text>
+    <text x="85" y="155" fontFamily="serif" fontSize="12" fill="#111827" opacity="0.6">Perfect Friendship</text>
   </svg>
 );
 
@@ -54,7 +54,7 @@ const ManScene = () => (
     </g>
     <text x="30" y="112" fontFamily="serif" fontSize="12" fill="#111827">Me</text>
     <text x="260" y="112" fontFamily="serif" fontSize="12" fill="#111827">God</text>
-    <text x="150" y="152" fontFamily="serif" fontSize="12" fill="#111827">Bad stuff</text>
+    <text x="150" y="152" fontFamily="serif" fontSize="12" fill="#111827">Sin</text>
   </svg>
 );
 
@@ -140,7 +140,7 @@ const PrayerScene = () => (
 export default function Page() {
   const [stage, setStage] = useState<Stage>('intro');
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [audioEnabled, setAudioEnabled] = useState(true);
+  const [audioEnabled, setAudioEnabled] = useState(false);
   const [audioStarted, setAudioStarted] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
@@ -153,20 +153,17 @@ export default function Page() {
     }
   };
 
+  const goToStage = (target: Stage) => {
+    setStage(target);
+    setTimeout(() => window.scrollTo(0, 0), 50);
+  };
+
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => ({
       ...prev,
       [sectionId]: !prev[sectionId]
     }));
   };
-
-  useEffect(() => {
-    if (audioRef.current && audioEnabled && !audioStarted) {
-      audioRef.current.volume = 0;
-      audioRef.current.play().catch(() => {});
-      setAudioStarted(true);
-    }
-  }, []);
 
   useEffect(() => {
     if (audioRef.current && audioStarted) {
@@ -180,8 +177,12 @@ export default function Page() {
   }, [audioEnabled, audioStarted]);
 
   const toggleAudio = () => {
-    if (!audioStarted) {
+    if (!audioStarted && audioRef.current) {
+      audioRef.current.volume = 0.05;
+      audioRef.current.play().catch(() => {});
       setAudioStarted(true);
+      setAudioEnabled(true);
+      return;
     }
     setAudioEnabled(prev => !prev);
   };
@@ -238,8 +239,17 @@ export default function Page() {
                 <PreacherAvatar />
                 <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-purple-900">Hi Kids! 👋</h1>
                 <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-                  I'm Jeremy! Want to hear an amazing story about God and Jesus? It's the best story ever!
+                  I'm Charles! Want to hear an amazing story about God and Jesus? It's the best story ever!
                 </p>
+                <button
+                  onClick={() => toggleSection('intro-wow')}
+                  className="px-4 py-2 text-sm sm:text-base bg-purple-100 text-purple-900 border border-purple-300 rounded hover:bg-purple-200 transition-colors"
+                >
+                  Tap for a surprise ✨
+                </button>
+                {expandedSections['intro-wow'] && (
+                  <p className="text-sm sm:text-base text-purple-800 mt-2">God made you on purpose and loves you more than you can imagine!</p>
+                )}
                 <button
                   onClick={nextStage}
                   className="px-6 sm:px-10 py-3 sm:py-4 bg-purple-600 text-white text-base sm:text-lg hover:bg-purple-700 transition-all shadow-lg flex items-center gap-2 mx-auto border-2 border-purple-700 rounded"
@@ -525,6 +535,58 @@ export default function Page() {
                   <p className="text-lg text-gray-800"><strong>Say sorry</strong> for your sins and turn from them</p>
                   <p className="text-lg text-gray-800"><strong>Believe</strong> that Jesus loves you and died for you</p>
                   <p className="text-lg text-gray-800"><strong>Follow</strong> Jesus as your Lord for the rest of your life</p>
+                </div>
+
+                <div className="bg-white border-2 border-green-300 rounded p-4 sm:p-6 space-y-3">
+                  <h3 className="font-bold text-green-900 text-base sm:text-lg">Want to review first? 🔄</h3>
+                  <p className="text-sm sm:text-base text-gray-700">Click a button to go back and review any part before you decide.</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <button
+                      onClick={() => goToStage('god')}
+                      className="px-4 py-2 bg-purple-100 text-purple-900 border border-purple-300 rounded hover:bg-purple-200 transition-colors"
+                    >
+                      Review God
+                    </button>
+                    <button
+                      onClick={() => goToStage('man')}
+                      className="px-4 py-2 bg-red-100 text-red-900 border border-red-300 rounded hover:bg-red-200 transition-colors"
+                    >
+                      Review Sin
+                    </button>
+                    <button
+                      onClick={() => goToStage('jesus')}
+                      className="px-4 py-2 bg-blue-100 text-blue-900 border border-blue-300 rounded hover:bg-blue-200 transition-colors"
+                    >
+                      Review Jesus
+                    </button>
+                  </div>
+                </div>
+
+                <div className="bg-amber-50 border-2 border-amber-300 rounded p-4 sm:p-6 space-y-3">
+                  <button
+                    onClick={() => toggleSection('not-ready')}
+                    className="w-full px-4 py-2 bg-amber-100 text-amber-900 border border-amber-300 rounded hover:bg-amber-200 transition-colors"
+                  >
+                    I’m not ready yet (that’s okay) ⏸️
+                  </button>
+                  {expandedSections['not-ready'] && (
+                    <div className="space-y-3 text-sm sm:text-base text-amber-900">
+                      <p>It’s okay to take time. God is patient and kind.</p>
+                      <ul className="list-disc pl-5 space-y-2">
+                        <li>Talk with a parent, pastor, or trusted adult.</li>
+                        <li>Read John 1–3 or Mark 1–2 together.</li>
+                        <li>Ask God to help you understand the gospel.</li>
+                      </ul>
+                      <a
+                        href="https://www.9marks.org/church-search/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700 transition-colors"
+                      >
+                        Find a Bible‑teaching church
+                      </a>
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
