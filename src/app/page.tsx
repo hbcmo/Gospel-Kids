@@ -473,6 +473,13 @@ export default function Page() {
                       Trust that Jesus died for YOUR sins and rose from the dead. Believe that He is the only way to be saved. Put all your faith in Him!
                     </p>
                   </div>
+
+                  <div className="bg-green-50 border-l-4 border-green-500 p-4">
+                    <h3 className="font-bold text-green-900 mb-2">3. Follow Jesus as Your Lord 👑</h3>
+                    <p className="text-gray-700">
+                      Jesus is not just your Savior—He is your <strong>LORD</strong>. This means you submit to His authority and follow Him for the rest of your life. Every day, choose to obey Him!
+                    </p>
+                  </div>
                 </div>
 
                 <div className="bg-green-100 border-2 border-green-300 p-6 rounded">
@@ -484,7 +491,7 @@ export default function Page() {
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  When you trust in Jesus, God forgives all your sins—past, present, and future! You become God's child forever. You cross the bridge from death to life!
+                  When you trust in Jesus, God forgives all your sins—past, present, and future! You become God's child forever. But remember: <strong>Jesus is your Lord</strong>, not just your Savior. That means you'll follow Him and obey Him for your whole life. You cross the bridge from death to life!
                 </p>
 
                 <div 
@@ -502,7 +509,7 @@ export default function Page() {
                       <p><strong>It's a gift, not something you earn:</strong> You can't work for salvation. God gives it freely when you trust Jesus!</p>
                       <p><strong>You become a new person:</strong> The Bible says you are "born again." God gives you a new heart that loves Him.</p>
                       <p><strong>You're secure forever:</strong> Once God saves you, He keeps you. Nothing can take you away from His love!</p>
-                      <p><strong>You'll want to obey Jesus:</strong> When Jesus saves you, you'll want to follow Him and do what He says—not to earn salvation, but because you love Him!</p>
+                      <p><strong>Jesus is your Lord forever:</strong> When Jesus saves you, you become His follower for life. You follow Him and obey His commands—not to earn salvation, but because He is your Lord and King!</p>
                     </div>
                   )}
                 </div>
@@ -515,9 +522,9 @@ export default function Page() {
                 </div>
                 
                 <div className="bg-green-100 border-2 border-green-300 p-6 space-y-3 rounded">
-                  <p className="text-lg text-gray-800"><strong>Say sorry</strong> for your bad stuff</p>
-                  <p className="text-lg text-gray-800"><strong>Believe</strong> that Jesus loves you</p>
-  
+                  <p className="text-lg text-gray-800"><strong>Say sorry</strong> for your sins and turn from them</p>
+                  <p className="text-lg text-gray-800"><strong>Believe</strong> that Jesus loves you and died for you</p>
+                  <p className="text-lg text-gray-800"><strong>Follow</strong> Jesus as your Lord for the rest of your life</p>
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
