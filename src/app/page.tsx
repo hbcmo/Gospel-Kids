@@ -216,7 +216,7 @@ export default function Page() {
             <span>God</span>
             <span>Me</span>
             <span>Jesus</span>
-            <span>Friends</span>
+            <span>Receive</span>
           </div>
           <div className="w-full h-2 bg-purple-200 rounded-sm overflow-hidden border border-purple-300">
             <div 
@@ -452,11 +452,11 @@ export default function Page() {
             <div className="max-w-3xl mx-auto bg-white border-4 border-green-500 shadow-2xl p-10 rounded-lg">
               <div className="border-2 border-green-300 p-8 space-y-6">
                 <InvitationScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Will You Follow Jesus? 🙏</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Receive Jesus as Your Lord and Savior 🙏</h2>
                 <div className="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  Jesus offers you forgiveness and eternal life as a free gift! But you have to receive it. Here's what God asks you to do:
+                  Jesus offers you forgiveness and eternal life as a free gift! But you have to <strong>receive Him</strong>—not just as a friend, but as your <strong>Lord and Savior</strong>. Here's what God asks you to do:
                 </p>
 
                 <div className="space-y-4">
