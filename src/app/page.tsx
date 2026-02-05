@@ -250,8 +250,8 @@ export default function Page() {
             <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-2 sm:p-4 rounded-lg">
               <div className="pt-0 sm:pt-1 pb-4 sm:pb-8 px-3 sm:px-4">
                 <PreacherAvatar />
-                <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-purple-900">Hi Kids! 👋</h1>
-                <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+              <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6 text-purple-900">Hi Kids! 👋</h1>
+              <p className="text-lg sm:text-2xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                   I'm Charles! Want to hear an amazing story about God and Jesus? It's the best story ever!
                 </p>
                 <button
@@ -281,7 +281,7 @@ export default function Page() {
                 {stagePage === 0 && (
                   <div className="space-y-3 sm:space-y-4">
                     <GodScene />
-                    <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
                     <div className="w-24 h-1 bg-purple-500 mx-auto mb-2 sm:mb-3"></div>
                     <p className="text-sm sm:text-lg leading-snug sm:leading-relaxed text-gray-800">
                       God made everything—the whole universe, all the stars, every animal, and YOU! God is perfect. He never does anything wrong. He is <strong>holy</strong>, which means He is completely pure and good.
@@ -290,7 +290,7 @@ export default function Page() {
                 )}
                 {stagePage === 1 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-purple-900">What Does God Say? 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-purple-900">What Does God Say? 📖</h3>
                     <div className="bg-purple-100 border-2 border-purple-300 p-3 sm:p-4 rounded">
                       <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
                         "In the beginning, God created the heavens and the earth... And God saw everything that he had made, and behold, it was very good."
@@ -304,7 +304,7 @@ export default function Page() {
                 )}
                 {stagePage === 2 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-purple-900">Learn More About God 🤔</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-purple-900">Learn More About God 🤔</h3>
                     <div className="space-y-2 text-sm sm:text-base text-gray-700">
                       <p><strong>God is eternal:</strong> He has always existed and will always exist. He never had a beginning!</p>
                       <p><strong>God is all-powerful:</strong> Nothing is too hard for God. He can do anything He wants.</p>
@@ -347,7 +347,7 @@ export default function Page() {
                 {stagePage === 0 && (
                   <div className="space-y-3 sm:space-y-4">
                     <ManScene />
-                    <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-red-900">We Chose to Sin Against God 😞</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center text-red-900">We Chose to Sin Against God 😞</h2>
                     <div className="w-24 h-1 bg-red-500 mx-auto mb-2 sm:mb-3"></div>
                     <p className="text-sm sm:text-lg leading-snug sm:leading-relaxed text-gray-800">
                       But something terrible happened. People chose to disobey God. This disobedience is called <strong>sin</strong>. Sin is when we break God's rules—when we lie, cheat, are mean, or think we don't need God.
@@ -356,7 +356,7 @@ export default function Page() {
                 )}
                 {stagePage === 1 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-red-900">What God Says About Sin 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-red-900">What God Says About Sin 📖</h3>
                     <div className="bg-red-100 border-2 border-red-300 p-3 sm:p-4 rounded">
                       <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
                         "All have sinned and fall short of the glory of God."
@@ -370,7 +370,7 @@ export default function Page() {
                 )}
                 {stagePage === 2 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-red-900">The Cost of Sin 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-red-900">The Cost of Sin 📖</h3>
                     <div className="bg-red-100 border-2 border-red-300 p-3 sm:p-4 rounded">
                       <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
                         "The wages of sin is death."
@@ -384,7 +384,7 @@ export default function Page() {
                 )}
                 {stagePage === 3 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-red-900">Learn More About Sin 🤔</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-red-900">Learn More About Sin 🤔</h3>
                     <div className="space-y-2 text-sm sm:text-base text-gray-700">
                       <p><strong>We're all sinners:</strong> Every person has sinned—except Jesus! Even if you try really hard to be good, you still sin.</p>
                       <p><strong>Sin offends God:</strong> Because God is perfectly holy, sin makes Him angry. He can't just ignore it or pretend it didn't happen.</p>
@@ -426,7 +426,7 @@ export default function Page() {
                 {stagePage === 0 && (
                   <div className="space-y-3 sm:space-y-4">
                     <JesusScene />
-                    <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
                     <div className="w-24 h-1 bg-blue-500 mx-auto mb-2 sm:mb-3"></div>
                     <p className="text-sm sm:text-lg leading-snug sm:leading-relaxed text-gray-800">
                       Here's the AMAZING news: God loved us so much that He sent His Son, Jesus, to rescue us! Jesus is not just a good teacher or helper—He is God Himself who became a human.
@@ -435,7 +435,7 @@ export default function Page() {
                 )}
                 {stagePage === 1 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-blue-900">God's Love for Us 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-blue-900">God's Love for Us 📖</h3>
                     <div className="bg-blue-100 border-2 border-blue-300 p-3 sm:p-4 rounded">
                       <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
                         "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."
@@ -449,7 +449,7 @@ export default function Page() {
                 )}
                 {stagePage === 2 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-blue-900">Jesus Died for Us 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-blue-900">Jesus Died for Us 📖</h3>
                     <div className="bg-blue-100 border-2 border-blue-300 p-3 sm:p-4 rounded">
                       <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
                         "He himself bore our sins in his body on the tree... By his wounds you have been healed."
@@ -463,7 +463,7 @@ export default function Page() {
                 )}
                 {stagePage === 3 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-blue-900">Jesus Is the Only Way 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-blue-900">Jesus Is the Only Way 📖</h3>
                     <div className="bg-blue-100 border-2 border-blue-300 p-3 sm:p-4 rounded">
                       <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
                         "Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'"
@@ -477,7 +477,7 @@ export default function Page() {
                 )}
                 {stagePage === 4 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-blue-900">Learn More About Jesus 🤔</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-blue-900">Learn More About Jesus 🤔</h3>
                     <div className="space-y-2 text-sm sm:text-base text-gray-700">
                       <p><strong>Jesus is fully God:</strong> Jesus has always existed with God the Father. He is the Creator of everything!</p>
                       <p><strong>Jesus became human:</strong> Jesus was born as a baby, grew up, and lived a real human life—but without sin.</p>
@@ -520,9 +520,9 @@ export default function Page() {
                 {stagePage === 0 && (
                   <div className="space-y-3 sm:space-y-4">
                     <InvitationScene />
-                    <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-green-900">Receive Jesus as Your Lord and Savior 🙏</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center text-green-900">Receive Jesus as Your Lord and Savior 🙏</h2>
                     <div className="w-24 h-1 bg-green-500 mx-auto mb-2 sm:mb-3"></div>
-                    <p className="text-lg leading-relaxed text-gray-800">
+                    <p className="text-xl leading-relaxed text-gray-800">
                       Jesus offers you forgiveness and eternal life as a free gift! But you have to <strong>receive Him</strong>—not just as a friend, but as your <strong>Lord and Savior</strong>. Here's what God asks you to do:
                     </p>
                   </div>
@@ -530,7 +530,7 @@ export default function Page() {
 
                 {stagePage === 1 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-green-900">Three Steps to Follow Jesus 🙏</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-green-900">Three Steps to Follow Jesus 🙏</h3>
                     <div className="space-y-4">
                       <div className="bg-green-50 border-l-4 border-green-500 p-4">
                         <h3 className="font-bold text-green-900 mb-2">1. Repent of Your Sin 🔄</h3>
@@ -558,14 +558,14 @@ export default function Page() {
 
                 {stagePage === 2 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-green-900">What God Says 📖</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-green-900">What God Says 📖</h3>
                     <div className="bg-green-100 border-2 border-green-300 p-6 rounded">
-                      <p className="italic text-gray-800 leading-relaxed">
+                      <p className="italic text-gray-800 leading-relaxed text-lg">
                         "If you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved."
                       </p>
                       <p className="text-sm text-gray-600 mt-2 text-right">— Romans 10:9 (ESV)</p>
                     </div>
-                    <p className="text-lg leading-relaxed text-gray-800">
+                    <p className="text-xl leading-relaxed text-gray-800">
                       When you trust in Jesus, God forgives all your sins—past, present, and future! You become God's child forever. But remember: <strong>Jesus is your Lord</strong>, not just your Savior. That means you'll follow Him and obey Him for your whole life. You cross the bridge from death to life!
                     </p>
                     <div 
@@ -592,7 +592,7 @@ export default function Page() {
 
                 {stagePage === 3 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-green-900">Ready to Receive Jesus? 🙏</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-green-900">Ready to Receive Jesus? 🙏</h3>
                     <div className="bg-white border-2 border-green-300 rounded p-4 sm:p-6 space-y-3">
                       <h4 className="font-bold text-green-900 text-base sm:text-lg">Want to review first? 🔄</h4>
                       <p className="text-sm sm:text-base text-gray-700">Click a button to go back and review any part before you decide.</p>
@@ -683,25 +683,25 @@ export default function Page() {
                 {stagePage === 0 && (
                   <div className="space-y-3 sm:space-y-4">
                     <PrayerScene />
-                    <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
                     <div className="w-24 h-1 bg-yellow-500 mx-auto mb-2 sm:mb-3"></div>
-                    <p className="text-lg leading-relaxed text-gray-800">
+                    <p className="text-xl leading-relaxed text-gray-800">
                       If you want to trust Jesus as your Savior and Lord, you can pray and tell God right now! Here's a prayer you can say. You can use your own words too—just talk to God from your heart!
                     </p>
                     <div className="bg-yellow-50 border-2 border-yellow-400 p-6 rounded space-y-4">
                       <p className="text-gray-800 leading-relaxed">
                         <strong>Dear God,</strong>
                       </p>
-                      <p className="text-gray-800 leading-relaxed pl-4">
+                      <p className="text-gray-800 leading-relaxed pl-4 text-lg">
                         I know that I am a sinner. I have done wrong things and I have disobeyed You. I'm sorry for my sin.
                       </p>
-                      <p className="text-gray-800 leading-relaxed pl-4">
+                      <p className="text-gray-800 leading-relaxed pl-4 text-lg">
                         I believe that Jesus is Your Son. I believe He died on the cross to take the punishment for MY sins. I believe He rose from the dead.
                       </p>
-                      <p className="text-gray-800 leading-relaxed pl-4">
+                      <p className="text-gray-800 leading-relaxed pl-4 text-lg">
                         Right now, I turn away from my sin and I put my trust in Jesus. I ask Jesus to be my Savior and my Lord. Please forgive me and save me.
                       </p>
-                      <p className="text-gray-800 leading-relaxed pl-4">
+                      <p className="text-gray-800 leading-relaxed pl-4 text-lg">
                         Thank You for loving me. Help me to follow You for the rest of my life.
                       </p>
                       <p className="text-gray-800 leading-relaxed">
@@ -713,7 +713,7 @@ export default function Page() {
 
                 {stagePage === 1 && (
                   <div className="space-y-3 sm:space-y-4">
-                    <h3 className="text-lg sm:text-2xl font-bold text-blue-900 text-center">🎉 If You Prayed That Prayer...</h3>
+                    <h3 className="text-xl sm:text-3xl font-bold text-blue-900 text-center">🎉 If You Prayed That Prayer...</h3>
                     <div className="bg-blue-50 border-2 border-blue-300 p-6 rounded">
                       <p className="text-gray-700 mb-4 text-center">
                         Congratulations! If you meant it from your heart, you are now a child of God! Here's what to do next:
