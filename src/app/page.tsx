@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { ChevronRight, Heart } from 'lucide-react';
+import { ChevronRight, Heart, ChevronDown, ChevronUp } from 'lucide-react';
 
 type Stage = 'intro' | 'god' | 'man' | 'jesus' | 'invitation' | 'prayer';
 
@@ -257,22 +257,44 @@ export default function Page() {
               <div className="border-2 border-purple-300 p-8 space-y-6">
                 <PreacherAvatar />
                 <GodScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-purple-900">God Made Everything! 🌍</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
                 <div className="w-24 h-1 bg-purple-500 mx-auto mb-6"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  God made the whole world! The sun, the stars, animals, people—everything! And He made YOU! He thinks you're super special.
+                  God made everything—the whole universe, all the stars, every animal, and YOU! God is perfect. He never does anything wrong. He is <strong>holy</strong>, which means He is completely pure and good.
                 </p>
-                
+
                 <div className="bg-purple-100 border-2 border-purple-300 p-6 rounded">
-                  <p className="text-center italic text-gray-800 font-semibold">
-                    "God made you on purpose. You are loved! 💜"
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "In the beginning, God created the heavens and the earth... And God saw everything that he had made, and behold, it was very good."
                   </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— Genesis 1:1, 31 (ESV)</p>
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  God is the best! He's super strong, super smart, and He loves everyone—especially you! God wanted to be best friends with us.
+                  God created people to know Him and love Him. When God first made people, they had a perfect friendship with Him. Everything was wonderful!
                 </p>
+
+                <div 
+                  className="bg-purple-50 border-2 border-purple-200 p-4 rounded cursor-pointer hover:bg-purple-100 transition-colors"
+                  onClick={() => toggleSection('god-learn-more')}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-bold text-purple-900 flex items-center gap-2">
+                      🤔 Learn More About God
+                    </h3>
+                    {expandedSections['god-learn-more'] ? <ChevronUp /> : <ChevronDown />}
+                  </div>
+                  {expandedSections['god-learn-more'] && (
+                    <div className="mt-4 space-y-3 text-gray-700">
+                      <p><strong>God is eternal:</strong> He has always existed and will always exist. He never had a beginning!</p>
+                      <p><strong>God is all-powerful:</strong> Nothing is too hard for God. He can do anything He wants.</p>
+                      <p><strong>God is all-knowing:</strong> God knows everything—even your thoughts! Nothing surprises Him.</p>
+                      <p><strong>God is loving:</strong> God's love is bigger than we can imagine. But His love is also holy and just.</p>
+                    </div>
+                  )}
+                </div>
 
                 <button
                   onClick={nextStage}
@@ -291,22 +313,55 @@ export default function Page() {
               <div className="border-2 border-red-300 p-8 space-y-6">
                 <PreacherAvatar />
                 <ManScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-red-900">Oh No! We Made Bad Choices 😞</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-red-900">We Chose to Sin Against God 😞</h2>
                 <div className="w-24 h-1 bg-red-500 mx-auto mb-6"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  Everyone does bad things sometimes. We make bad choices. We hurt people. We don't listen. And that bad stuff separates us from God.
+                  But something terrible happened. People chose to disobey God. This disobedience is called <strong>sin</strong>. Sin is when we break God's rules—when we lie, cheat, are mean, or think we don't need God.
                 </p>
                 
                 <div className="bg-red-100 border-2 border-red-300 p-6 rounded">
-                  <p className="text-center italic text-gray-800 font-semibold">
-                    "Everyone messes up. That's called sin. 😢"
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "All have sinned and fall short of the glory of God."
                   </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— Romans 3:23 (ESV)</p>
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  See the big gap? That's what sin does. It puts a wall between us and God. We can't jump across it by ourselves. But don't worry—God has a plan!
+                  Sin is really serious. It separates us from God like a giant canyon. Because God is perfect and holy, He <strong>must</strong> punish sin. The Bible says the punishment for sin is death—being separated from God forever.
                 </p>
+
+                <div className="bg-red-100 border-2 border-red-300 p-6 rounded">
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "The wages of sin is death."
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— Romans 6:23a (ESV)</p>
+                </div>
+
+                <p className="text-lg leading-relaxed text-gray-800">
+                  We can't fix this problem by ourselves. We can't jump across the canyon. We can't be good enough. We need help!
+                </p>
+
+                <div 
+                  className="bg-red-50 border-2 border-red-200 p-4 rounded cursor-pointer hover:bg-red-100 transition-colors"
+                  onClick={() => toggleSection('sin-learn-more')}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-bold text-red-900 flex items-center gap-2">
+                      🤔 Learn More About Sin
+                    </h3>
+                    {expandedSections['sin-learn-more'] ? <ChevronUp /> : <ChevronDown />}
+                  </div>
+                  {expandedSections['sin-learn-more'] && (
+                    <div className="mt-4 space-y-3 text-gray-700">
+                      <p><strong>We're all sinners:</strong> Every person has sinned—except Jesus! Even if you try really hard to be good, you still sin.</p>
+                      <p><strong>Sin offends God:</strong> Because God is perfectly holy, sin makes Him angry. He can't just ignore it or pretend it didn't happen.</p>
+                      <p><strong>We can't save ourselves:</strong> No amount of being good, going to church, or being nice can erase our sin. We need a Savior!</p>
+                    </div>
+                  )}
+                </div>
 
                 <button
                   onClick={nextStage}
@@ -325,22 +380,64 @@ export default function Page() {
               <div className="border-2 border-blue-300 p-8 space-y-6">
                 <PreacherAvatar />
                 <JesusScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">Jesus is the Bridge! ✝️</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
                 <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  Jesus is God's son! He came to be a bridge so we can get back to God. Jesus never did anything wrong. He was perfect!
+                  Here's the AMAZING news: God loved us so much that He sent His Son, Jesus, to rescue us! Jesus is not just a good teacher or helper—He is God Himself who became a human.
                 </p>
-                
+
                 <div className="bg-blue-100 border-2 border-blue-300 p-6 rounded">
-                  <p className="text-center italic text-gray-800 font-semibold">
-                    "Jesus died on the cross to take away our bad stuff. He loves us THAT much! 💙"
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."
                   </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— John 3:16 (ESV)</p>
+                </div>
+                
+                <p className="text-lg leading-relaxed text-gray-800">
+                  Jesus lived a perfect life. He never sinned—not even once! Then Jesus died on the cross. When He died, He took the punishment that WE deserved. He took God's anger against our sin upon Himself.
+                </p>
+
+                <div className="bg-blue-100 border-2 border-blue-300 p-6 rounded">
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "He himself bore our sins in his body on the tree... By his wounds you have been healed."
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— 1 Peter 2:24 (ESV)</p>
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  Jesus took the punishment for our bad choices. Then He came back to life! That means Jesus is strong enough to save us. He IS the bridge!
+                  But that's not the end! Three days later, Jesus came back to life! He conquered death and sin. Jesus is alive right now in heaven, and He is the ONLY way to be saved and have friendship with God forever.
                 </p>
+
+                <div className="bg-blue-100 border-2 border-blue-300 p-6 rounded">
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'"
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— John 14:6 (ESV)</p>
+                </div>
+
+                <div 
+                  className="bg-blue-50 border-2 border-blue-200 p-4 rounded cursor-pointer hover:bg-blue-100 transition-colors"
+                  onClick={() => toggleSection('jesus-learn-more')}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-bold text-blue-900 flex items-center gap-2">
+                      🤔 Learn More About Jesus
+                    </h3>
+                    {expandedSections['jesus-learn-more'] ? <ChevronUp /> : <ChevronDown />}
+                  </div>
+                  {expandedSections['jesus-learn-more'] && (
+                    <div className="mt-4 space-y-3 text-gray-700">
+                      <p><strong>Jesus is fully God:</strong> Jesus has always existed with God the Father. He is the Creator of everything!</p>
+                      <p><strong>Jesus became human:</strong> Jesus was born as a baby, grew up, and lived a real human life—but without sin.</p>
+                      <p><strong>Jesus is our substitute:</strong> On the cross, Jesus took our place. He received the punishment we deserved so we could be forgiven.</p>
+                      <p><strong>Jesus is Lord:</strong> Jesus isn't just a friend—He is the King and Ruler over everything. We need to trust Him and obey Him.</p>
+                    </div>
+                  )}
+                </div>
 
                 <button
                   onClick={nextStage}
@@ -359,12 +456,67 @@ export default function Page() {
               <div className="border-2 border-green-300 p-8 space-y-6">
                 <PreacherAvatar />
                 <InvitationScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Do You Want to be God's Friend? 🤝</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Turn to Jesus and Be Saved! 🙏</h2>
                 <div className="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
-                  You can walk across the Jesus bridge RIGHT NOW and be friends with God forever!
+                  Jesus offers you forgiveness and eternal life as a free gift! But you have to receive it. Here's what God asks you to do:
                 </p>
+
+                <div className="space-y-4">
+                  <div className="bg-green-50 border-l-4 border-green-500 p-4">
+                    <h3 className="font-bold text-green-900 mb-2">1. Repent of Your Sin 🔄</h3>
+                    <p className="text-gray-700">
+                      <strong>Repent</strong> means to turn away from your sin. Admit you've done wrong and decide to stop living your own way. Turn to God instead!
+                    </p>
+                  </div>
+
+                  <div className="bg-green-50 border-l-4 border-green-500 p-4">
+                    <h3 className="font-bold text-green-900 mb-2">2. Believe in Jesus ✝️</h3>
+                    <p className="text-gray-700">
+                      Trust that Jesus died for YOUR sins and rose from the dead. Believe that He is the only way to be saved. Put all your faith in Him!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-green-100 border-2 border-green-300 p-6 rounded">
+                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 leading-relaxed">
+                    "If you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved."
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2 text-right">— Romans 10:9 (ESV)</p>
+                </div>
+
+                <p className="text-lg leading-relaxed text-gray-800">
+                  When you trust in Jesus, God forgives all your sins—past, present, and future! You become God's child forever. You cross the bridge from death to life!
+                </p>
+
+                <div 
+                  className="bg-green-50 border-2 border-green-200 p-4 rounded cursor-pointer hover:bg-green-100 transition-colors"
+                  onClick={() => toggleSection('salvation-learn-more')}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-bold text-green-900 flex items-center gap-2">
+                      🤔 Learn More About Being Saved
+                    </h3>
+                    {expandedSections['salvation-learn-more'] ? <ChevronUp /> : <ChevronDown />}
+                  </div>
+                  {expandedSections['salvation-learn-more'] && (
+                    <div className="mt-4 space-y-3 text-gray-700">
+                      <p><strong>It's a gift, not something you earn:</strong> You can't work for salvation. God gives it freely when you trust Jesus!</p>
+                      <p><strong>You become a new person:</strong> The Bible says you are "born again." God gives you a new heart that loves Him.</p>
+                      <p><strong>You're secure forever:</strong> Once God saves you, He keeps you. Nothing can take you away from His love!</p>
+                      <p><strong>You'll want to obey Jesus:</strong> When Jesus saves you, you'll want to follow Him and do what He says—not to earn salvation, but because you love Him!</p>
+                    </div>
+                  )}
+                </div>
+
+                <div className="bg-amber-50 border-2 border-amber-400 p-6 rounded">
+                  <p className="text-gray-800 font-semibold mb-2">⚠️ Important:</p>
+                  <p className="text-gray-700">
+                    If you want to be saved, you can talk to God right now! Prayer doesn't save you—Jesus does. But prayer is how you talk to God. Let's pray together!
+                  </p>
+                </div>
                 
                 <div className="bg-green-100 border-2 border-green-300 p-6 space-y-3 rounded">
                   <p className="text-lg text-gray-800"><strong>Say sorry</strong> for your bad stuff</p>
@@ -393,36 +545,100 @@ export default function Page() {
               <div className="border-2 border-yellow-300 p-8 space-y-6">
                 <PreacherAvatar />
                 <PrayerScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-yellow-900">Let's Pray! 🙏</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
                 <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
 
-                <p className="text-lg font-semibold leading-relaxed text-gray-800 italic">
-                  "Dear Jesus, I'm sorry for the bad stuff I do. I believe You love me and died for me. Please forgive me. Be my best friend forever. Help me follow You. Thank You! Amen."
+                <p className="text-lg leading-relaxed text-gray-800">
+                  If you want to trust Jesus as your Savior and Lord, you can pray and tell God right now! Here's a prayer you can say. You can use your own words too—just talk to God from your heart!
                 </p>
 
-                <div className="bg-yellow-100 border-2 border-yellow-300 p-6 space-y-4 rounded">
-                  <h3 className="text-2xl font-bold text-yellow-900">What Happens Next? 🎉</h3>
-                  <div className="space-y-3 text-gray-800">
-                    <p><strong>1. Tell a grown-up!</strong> Tell your parents or a teacher what you did.</p>
-                    <p><strong>2. Go to church!</strong> Find a church where they teach about Jesus.</p>
-                    <p><strong>3. Read the Bible!</strong> Start with the Gospel of John to learn about Jesus.</p>
-                    <p><strong>4. Pray every day!</strong> Talk to Jesus like He's your best friend (because He is!).</p>
-                  </div>
-                  <div className="pt-4 border-t-2 border-yellow-300 mt-4">
-                    <a 
-                      href="https://www.9marks.org/church-search/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-block px-6 py-3 bg-yellow-600 text-white font-semibold hover:bg-yellow-700 transition-all rounded"
-                    >
-                      Find a Church Near You
-                    </a>
-                  </div>
+                <div className="bg-yellow-50 border-2 border-yellow-400 p-6 rounded space-y-4">
+                  <p className="text-gray-800 leading-relaxed">
+                    <strong>Dear God,</strong>
+                  </p>
+                  <p className="text-gray-800 leading-relaxed pl-4">
+                    I know that I am a sinner. I have done wrong things and I have disobeyed You. I'm sorry for my sin.
+                  </p>
+                  <p className="text-gray-800 leading-relaxed pl-4">
+                    I believe that Jesus is Your Son. I believe He died on the cross to take the punishment for MY sins. I believe He rose from the dead.
+                  </p>
+                  <p className="text-gray-800 leading-relaxed pl-4">
+                    Right now, I turn away from my sin and I put my trust in Jesus. I ask Jesus to be my Savior and my Lord. Please forgive me and save me.
+                  </p>
+                  <p className="text-gray-800 leading-relaxed pl-4">
+                    Thank You for loving me. Help me to follow You for the rest of my life.
+                  </p>
+                  <p className="text-gray-800 leading-relaxed">
+                    <strong>In Jesus' name, Amen.</strong>
+                  </p>
                 </div>
 
-                <p className="text-center text-2xl font-bold text-yellow-900 pt-4">
-                  Welcome to God's Family! 🎊
-                </p>
+                <div className="bg-blue-50 border-2 border-blue-300 p-6 rounded">
+                  <h3 className="font-bold text-blue-900 mb-3 text-center">🎉 If You Prayed That Prayer...</h3>
+                  <p className="text-gray-700 mb-4 text-center">
+                    Congratulations! If you meant it from your heart, you are now a child of God! Here's what to do next:
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">1.</span>
+                      <span><strong>Tell someone!</strong> Share with a parent, pastor, or Christian friend that you trusted Jesus today!</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">2.</span>
+                      <span><strong>Read the Bible every day.</strong> Start with the book of John in the New Testament.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">3.</span>
+                      <span><strong>Pray every day.</strong> Talk to God like you'd talk to your best friend!</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">4.</span>
+                      <span><strong>Find a good church.</strong> You need to be part of a church family that teaches the Bible.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-bold text-blue-600">5.</span>
+                      <span><strong>Get baptized.</strong> Baptism is how you show others that you belong to Jesus!</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-r from-purple-100 to-blue-100 border-2 border-purple-300 p-6 rounded text-center">
+                  <h3 className="font-bold text-purple-900 mb-3 flex items-center justify-center gap-2">
+                    <Heart className="w-6 h-6 fill-current text-red-500" />
+                    Find a Bible-Teaching Church Near You
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    It's important to find a church that teaches the Bible clearly and believes in the gospel of Jesus Christ.
+                  </p>
+                  <a
+                    href="https://www.9marks.org/church-search/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 bg-purple-600 text-white hover:bg-purple-700 transition-all border-2 border-purple-700 rounded"
+                  >
+                    Search for Churches →
+                  </a>
+                </div>
+
+                <div 
+                  className="bg-yellow-50 border-2 border-yellow-200 p-4 rounded cursor-pointer hover:bg-yellow-100 transition-colors"
+                  onClick={() => toggleSection('next-steps-learn-more')}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-bold text-yellow-900 flex items-center gap-2">
+                      🤔 Questions About What Happens Next?
+                    </h3>
+                    {expandedSections['next-steps-learn-more'] ? <ChevronUp /> : <ChevronDown />}
+                  </div>
+                  {expandedSections['next-steps-learn-more'] && (
+                    <div className="mt-4 space-y-3 text-gray-700">
+                      <p><strong>Will I still sin?</strong> Yes, Christians still struggle with sin. But God will help you fight it, and He always forgives you when you confess.</p>
+                      <p><strong>How do I know I'm really saved?</strong> Look for changes in your life—do you love Jesus? Do you want to obey Him? Do you love other Christians? These are signs God has saved you!</p>
+                      <p><strong>What if I have doubts?</strong> It's normal to have questions! Talk to a pastor or mature Christian. Keep reading the Bible and praying.</p>
+                      <p><strong>Can I lose my salvation?</strong> No! When God saves you, He keeps you forever. Nothing can separate you from His love.</p>
+                    </div>
+                  )}
+                </div>
 
                 <button
                   onClick={() => setStage('intro')}
@@ -439,6 +655,7 @@ export default function Page() {
       <footer className="border-t border-purple-300 mt-12 py-8 text-center text-sm text-gray-600">
         <p><strong className="text-purple-900">Created by Harmony Baptist Church</strong></p>
         <p>Waynesville, Missouri</p>
+        <p className="mt-2">All Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®)</p>
       </footer>
     </div>
   );
