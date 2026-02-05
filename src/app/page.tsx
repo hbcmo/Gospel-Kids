@@ -210,9 +210,9 @@ export default function Page() {
         )}
       </button>
 
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="container mx-auto px-4 py-4 sm:py-8 max-w-4xl">
         <div className="mb-8">
-          <div className="flex justify-between mb-2 text-sm font-bold text-purple-800">
+          <div className="flex justify-between mb-2 text-xs sm:text-sm font-bold text-purple-800 gap-1">
             <span>God</span>
             <span>Me</span>
             <span>Jesus</span>
@@ -233,16 +233,16 @@ export default function Page() {
 
         {stage === 'intro' && (
           <div className="text-center space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-12 rounded-lg">
-              <div className="border-2 border-purple-300 p-8">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-6 sm:p-12 rounded-lg">
+              <div className="border-2 border-purple-300 p-4 sm:p-8">
                 <PreacherAvatar />
-                <h1 className="text-4xl font-bold mb-6 text-purple-900">Hi Kids! 👋</h1>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-purple-900">Hi Kids! 👋</h1>
+                <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                   I'm Jeremy! Want to hear an amazing story about God and Jesus? It's the best story ever!
                 </p>
                 <button
                   onClick={nextStage}
-                  className="px-10 py-4 bg-purple-600 text-white text-lg hover:bg-purple-700 transition-all shadow-lg flex items-center gap-2 mx-auto border-2 border-purple-700 rounded"
+                  className="px-6 sm:px-10 py-3 sm:py-4 bg-purple-600 text-white text-base sm:text-lg hover:bg-purple-700 transition-all shadow-lg flex items-center gap-2 mx-auto border-2 border-purple-700 rounded"
                 >
                   Yes! Tell Me! <ChevronRight />
                 </button>
@@ -255,7 +255,6 @@ export default function Page() {
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-10 rounded-lg">
               <div className="border-2 border-purple-300 p-8 space-y-6">
-                <PreacherAvatar />
                 <GodScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
                 <div className="w-24 h-1 bg-purple-500 mx-auto mb-6"></div>
@@ -264,9 +263,9 @@ export default function Page() {
                   God made everything—the whole universe, all the stars, every animal, and YOU! God is perfect. He never does anything wrong. He is <strong>holy</strong>, which means He is completely pure and good.
                 </p>
 
-                <div className="bg-purple-100 border-2 border-purple-300 p-6 rounded">
-                  <p className="text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
-                  <p className="italic text-gray-800 leading-relaxed">
+                <div className="bg-purple-100 border-2 border-purple-300 p-4 sm:p-6 rounded">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
+                  <p className="italic text-gray-800 text-sm sm:text-base leading-relaxed">
                     "In the beginning, God created the heavens and the earth... And God saw everything that he had made, and behold, it was very good."
                   </p>
                   <p className="text-sm text-gray-600 mt-2 text-right">— Genesis 1:1, 31 (ESV)</p>
@@ -277,11 +276,11 @@ export default function Page() {
                 </p>
 
                 <div 
-                  className="bg-purple-50 border-2 border-purple-200 p-4 rounded cursor-pointer hover:bg-purple-100 transition-colors"
+                  className="bg-purple-50 border-2 border-purple-200 p-3 sm:p-4 rounded cursor-pointer hover:bg-purple-100 transition-colors"
                   onClick={() => toggleSection('god-learn-more')}
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-bold text-purple-900 flex items-center gap-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="font-bold text-purple-900 text-sm sm:text-base flex items-center gap-2">
                       🤔 Learn More About God
                     </h3>
                     {expandedSections['god-learn-more'] ? <ChevronUp /> : <ChevronDown />}
@@ -311,7 +310,6 @@ export default function Page() {
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-red-500 shadow-2xl p-10 rounded-lg">
               <div className="border-2 border-red-300 p-8 space-y-6">
-                <PreacherAvatar />
                 <ManScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-red-900">We Chose to Sin Against God 😞</h2>
                 <div className="w-24 h-1 bg-red-500 mx-auto mb-6"></div>
@@ -378,7 +376,6 @@ export default function Page() {
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-blue-500 shadow-2xl p-10 rounded-lg">
               <div className="border-2 border-blue-300 p-8 space-y-6">
-                <PreacherAvatar />
                 <JesusScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
                 <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
@@ -454,9 +451,8 @@ export default function Page() {
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-green-500 shadow-2xl p-10 rounded-lg">
               <div className="border-2 border-green-300 p-8 space-y-6">
-                <PreacherAvatar />
                 <InvitationScene />
-                <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Turn to Jesus and Be Saved! 🙏</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Will You Follow Jesus? 🙏</h2>
                 <div className="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
@@ -521,7 +517,7 @@ export default function Page() {
                 <div className="bg-green-100 border-2 border-green-300 p-6 space-y-3 rounded">
                   <p className="text-lg text-gray-800"><strong>Say sorry</strong> for your bad stuff</p>
                   <p className="text-lg text-gray-800"><strong>Believe</strong> that Jesus loves you</p>
-                  <p className="text-lg text-gray-800"><strong>Ask Jesus</strong> to be your best friend forever</p>
+  
                 </div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
@@ -543,7 +539,6 @@ export default function Page() {
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-yellow-500 shadow-2xl p-10 rounded-lg">
               <div className="border-2 border-yellow-300 p-8 space-y-6">
-                <PreacherAvatar />
                 <PrayerScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
                 <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
@@ -578,7 +573,7 @@ export default function Page() {
                   <p className="text-gray-700 mb-4 text-center">
                     Congratulations! If you meant it from your heart, you are now a child of God! Here's what to do next:
                   </p>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                     <li className="flex items-start gap-2">
                       <span className="font-bold text-blue-600">1.</span>
                       <span><strong>Tell someone!</strong> Share with a parent, pastor, or Christian friend that you trusted Jesus today!</span>
