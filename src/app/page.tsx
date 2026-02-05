@@ -235,7 +235,7 @@ export default function Page() {
         {stage === 'intro' && (
           <div className="text-center space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-6 sm:p-12 rounded-lg">
-              <div className="border-2 border-purple-300 pt-2 sm:pt-4 pb-4 sm:pb-8 px-4 sm:px-8">
+              <div className="border-2 border-purple-300 pt-0 sm:pt-1 pb-4 sm:pb-8 px-4 sm:px-8">
                 <PreacherAvatar />
                 <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-purple-900">Hi Kids! 👋</h1>
                 <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
@@ -264,7 +264,7 @@ export default function Page() {
         {stage === 'god' && (
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-10 rounded-lg">
-              <div className="border-2 border-purple-300 pt-2 sm:pt-4 pb-8 px-8 space-y-6">
+              <div className="border-2 border-purple-300 pt-0 sm:pt-1 pb-8 px-8 space-y-6">
                 <GodScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
                 <div className="w-24 h-1 bg-purple-500 mx-auto mb-6"></div>
@@ -319,7 +319,7 @@ export default function Page() {
         {stage === 'man' && (
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-red-500 shadow-2xl p-10 rounded-lg">
-              <div className="border-2 border-red-300 pt-2 sm:pt-4 pb-8 px-8 space-y-6">
+              <div className="border-2 border-red-300 pt-0 sm:pt-1 pb-8 px-8 space-y-6">
                 <ManScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-red-900">We Chose to Sin Against God 😞</h2>
                 <div className="w-24 h-1 bg-red-500 mx-auto mb-6"></div>
@@ -385,7 +385,7 @@ export default function Page() {
         {stage === 'jesus' && (
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-blue-500 shadow-2xl p-10 rounded-lg">
-              <div className="border-2 border-blue-300 pt-2 sm:pt-4 pb-8 px-8 space-y-6">
+              <div className="border-2 border-blue-300 pt-0 sm:pt-1 pb-8 px-8 space-y-6">
                 <JesusScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
                 <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
@@ -460,7 +460,7 @@ export default function Page() {
         {stage === 'invitation' && (
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-green-500 shadow-2xl p-10 rounded-lg">
-              <div className="border-2 border-green-300 pt-2 sm:pt-4 pb-8 px-8 space-y-6">
+              <div className="border-2 border-green-300 pt-0 sm:pt-1 pb-8 px-8 space-y-6">
                 <InvitationScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-green-900">Receive Jesus as Your Lord and Savior 🙏</h2>
                 <div className="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
@@ -607,7 +607,7 @@ export default function Page() {
         {stage === 'prayer' && (
           <div className="space-y-8 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-yellow-500 shadow-2xl p-10 rounded-lg">
-              <div className="border-2 border-yellow-300 pt-2 sm:pt-4 pb-8 px-8 space-y-6">
+              <div className="border-2 border-yellow-300 pt-0 sm:pt-1 pb-8 px-8 space-y-6">
                 <PrayerScene />
                 <h2 className="text-3xl font-bold mb-6 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
                 <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
