@@ -234,8 +234,8 @@ export default function Page() {
 
         {stage === 'intro' && (
           <div className="text-center space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-6 sm:p-12 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-4 sm:pb-8 px-4 sm:px-8">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-2 sm:p-4 rounded-lg">
+              <div className="pt-0 sm:pt-1 pb-4 sm:pb-8 px-3 sm:px-4">
                 <PreacherAvatar />
                 <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-purple-900">Hi Kids! 👋</h1>
                 <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
@@ -263,11 +263,11 @@ export default function Page() {
 
         {stage === 'god' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-10 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-8 px-8 space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-2 sm:p-4 rounded-lg">
+              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
                 <GodScene />
-                <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-6 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
-                <div className="w-24 h-1 bg-purple-500 mx-auto mb-6"></div>
+                <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
+                <div className="w-24 h-1 bg-purple-500 mx-auto mb-2 sm:mb-3"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
                   God made everything—the whole universe, all the stars, every animal, and YOU! God is perfect. He never does anything wrong. He is <strong>holy</strong>, which means He is completely pure and good.
@@ -318,11 +318,11 @@ export default function Page() {
 
         {stage === 'man' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-red-500 shadow-2xl p-10 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-8 px-8 space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-red-500 shadow-2xl p-2 sm:p-4 rounded-lg">
+              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
                 <ManScene />
-                <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-6 text-center text-red-900">We Chose to Sin Against God 😞</h2>
-                <div className="w-24 h-1 bg-red-500 mx-auto mb-6"></div>
+                <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-red-900">We Chose to Sin Against God 😞</h2>
+                <div className="w-24 h-1 bg-red-500 mx-auto mb-2 sm:mb-3"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
                   But something terrible happened. People chose to disobey God. This disobedience is called <strong>sin</strong>. Sin is when we break God's rules—when we lie, cheat, are mean, or think we don't need God.
@@ -384,11 +384,11 @@ export default function Page() {
 
         {stage === 'jesus' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-blue-500 shadow-2xl p-10 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-8 px-8 space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-blue-500 shadow-2xl p-2 sm:p-4 rounded-lg">
+              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
                 <JesusScene />
-                <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-6 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
-                <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-blue-900">Jesus Came to Save Us! ✝️</h2>
+                <div className="w-24 h-1 bg-blue-500 mx-auto mb-2 sm:mb-3"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
                   Here's the AMAZING news: God loved us so much that He sent His Son, Jesus, to rescue us! Jesus is not just a good teacher or helper—He is God Himself who became a human.
@@ -459,11 +459,11 @@ export default function Page() {
 
         {stage === 'invitation' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-green-500 shadow-2xl p-10 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-8 px-8 space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-green-500 shadow-2xl p-2 sm:p-4 rounded-lg">
+              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
                 <InvitationScene />
-                <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-6 text-center text-green-900">Receive Jesus as Your Lord and Savior 🙏</h2>
-                <div className="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
+                <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-green-900">Receive Jesus as Your Lord and Savior 🙏</h2>
+                <div className="w-24 h-1 bg-green-500 mx-auto mb-2 sm:mb-3"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
                   Jesus offers you forgiveness and eternal life as a free gift! But you have to <strong>receive Him</strong>—not just as a friend, but as your <strong>Lord and Savior</strong>. Here's what God asks you to do:
@@ -606,11 +606,11 @@ export default function Page() {
 
         {stage === 'prayer' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="max-w-3xl mx-auto bg-white border-4 border-yellow-500 shadow-2xl p-10 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-8 px-8 space-y-4 sm:space-y-6">
+            <div className="max-w-3xl mx-auto bg-white border-4 border-yellow-500 shadow-2xl p-2 sm:p-4 rounded-lg">
+              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
                 <PrayerScene />
-                <h2 className="text-xl sm:text-3xl font-bold mb-2 sm:mb-6 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
-                <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
+                <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-yellow-900">Pray to God Right Now! 💛</h2>
+                <div className="w-24 h-1 bg-yellow-500 mx-auto mb-2 sm:mb-3"></div>
 
                 <p className="text-lg leading-relaxed text-gray-800">
                   If you want to trust Jesus as your Savior and Lord, you can pray and tell God right now! Here's a prayer you can say. You can use your own words too—just talk to God from your heart!
