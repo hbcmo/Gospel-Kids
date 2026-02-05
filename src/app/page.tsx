@@ -562,6 +562,17 @@ export default function Page() {
                   </div>
                 </div>
 
+                <p className="text-lg leading-relaxed text-gray-800">
+                  Do you want to do this? If yes, click the button below and we'll pray!
+                </p>
+
+                <button
+                  onClick={nextStage}
+                  className="w-full px-6 py-3 bg-green-600 text-white hover:bg-green-700 transition-all border-2 border-green-700 rounded"
+                >
+                  Yes, Let's Pray! <ChevronRight />
+                </button>
+
                 <div className="bg-amber-50 border-2 border-amber-300 rounded p-4 sm:p-6 space-y-3">
                   <button
                     onClick={() => toggleSection('not-ready')}
@@ -588,17 +599,6 @@ export default function Page() {
                     </div>
                   )}
                 </div>
-
-                <p className="text-lg leading-relaxed text-gray-800">
-                  Do you want to do this? If yes, click the button below and we'll pray!
-                </p>
-
-                <button
-                  onClick={nextStage}
-                  className="w-full px-6 py-3 bg-green-600 text-white hover:bg-green-700 transition-all border-2 border-green-700 rounded"
-                >
-                  Yes, Let's Pray! <ChevronRight />
-                </button>
               </div>
             </div>
           </div>
