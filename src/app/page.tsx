@@ -139,6 +139,7 @@ const PrayerScene = () => (
 
 export default function Page() {
   const [stage, setStage] = useState<Stage>('intro');
+  const [stagePage, setStagePage] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [audioEnabled, setAudioEnabled] = useState(false);
   const [audioStarted, setAudioStarted] = useState(false);
@@ -149,12 +150,24 @@ export default function Page() {
     const currentIndex = stages.indexOf(stage);
     if (currentIndex < stages.length - 1) {
       setStage(stages[currentIndex + 1]);
+      setStagePage(0);
       setTimeout(() => window.scrollTo(0, 0), 50);
     }
   };
 
   const goToStage = (target: Stage) => {
     setStage(target);
+    setStagePage(0);
+    setTimeout(() => window.scrollTo(0, 0), 50);
+  };
+
+  const nextPage = () => {
+    setStagePage(prev => prev + 1);
+    setTimeout(() => window.scrollTo(0, 0), 50);
+  };
+
+  const prevPage = () => {
+    setStagePage(prev => Math.max(0, prev - 1));
     setTimeout(() => window.scrollTo(0, 0), 50);
   };
 
@@ -262,55 +275,66 @@ export default function Page() {
         )}
 
         {stage === 'god' && (
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-4 animate-fade-in">
             <div className="max-w-3xl mx-auto bg-white border-4 border-purple-500 shadow-2xl p-2 sm:p-4 rounded-lg">
-              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4 space-y-3 sm:space-y-4">
-                <GodScene />
-                <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
-                <div className="w-24 h-1 bg-purple-500 mx-auto mb-2 sm:mb-3"></div>
-
-                <p className="text-lg leading-relaxed text-gray-800">
-                  God made everything—the whole universe, all the stars, every animal, and YOU! God is perfect. He never does anything wrong. He is <strong>holy</strong>, which means He is completely pure and good.
-                </p>
-
-                <div className="bg-purple-100 border-2 border-purple-300 p-4 sm:p-6 rounded">
-                  <p className="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">📖 What God Says:</p>
-                  <p className="italic text-gray-800 text-sm sm:text-base leading-relaxed">
-                    "In the beginning, God created the heavens and the earth... And God saw everything that he had made, and behold, it was very good."
-                  </p>
-                  <p className="text-sm text-gray-600 mt-2 text-right">— Genesis 1:1, 31 (ESV)</p>
-                </div>
-
-                <p className="text-lg leading-relaxed text-gray-800">
-                  God created people to know Him and love Him. When God first made people, they had a perfect friendship with Him. Everything was wonderful!
-                </p>
-
-                <div 
-                  className="bg-purple-50 border-2 border-purple-200 p-3 sm:p-4 rounded cursor-pointer hover:bg-purple-100 transition-colors"
-                  onClick={() => toggleSection('god-learn-more')}
-                >
-                  <div className="flex items-center justify-between gap-2">
-                    <h3 className="font-bold text-purple-900 text-sm sm:text-base flex items-center gap-2">
-                      🤔 Learn More About God
-                    </h3>
-                    {expandedSections['god-learn-more'] ? <ChevronUp /> : <ChevronDown />}
+              <div className="pt-0 sm:pt-1 pb-6 sm:pb-6 px-3 sm:px-4">
+                {stagePage === 0 && (
+                  <div className="space-y-3 sm:space-y-4">
+                    <GodScene />
+                    <h2 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2 text-center text-purple-900">God Is Perfect and Holy! 🌟</h2>
+                    <div className="w-24 h-1 bg-purple-500 mx-auto mb-2 sm:mb-3"></div>
+                    <p className="text-sm sm:text-lg leading-snug sm:leading-relaxed text-gray-800">
+                      God made everything—the whole universe, all the stars, every animal, and YOU! God is perfect. He never does anything wrong. He is <strong>holy</strong>, which means He is completely pure and good.
+                    </p>
                   </div>
-                  {expandedSections['god-learn-more'] && (
-                    <div className="mt-4 space-y-3 text-gray-700">
+                )}
+                {stagePage === 1 && (
+                  <div className="space-y-3 sm:space-y-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-purple-900">What Does God Say? 📖</h3>
+                    <div className="bg-purple-100 border-2 border-purple-300 p-3 sm:p-4 rounded">
+                      <p className="italic text-gray-800 text-sm sm:text-base leading-snug sm:leading-relaxed">
+                        "In the beginning, God created the heavens and the earth... And God saw everything that he had made, and behold, it was very good."
+                      </p>
+                      <p className="text-xs sm:text-sm text-gray-600 mt-2 text-right">— Genesis 1:1, 31 (ESV)</p>
+                    </div>
+                    <p className="text-sm sm:text-lg leading-snug sm:leading-relaxed text-gray-800">
+                      God created people to know Him and love Him. When God first made people, they had a perfect friendship with Him. Everything was wonderful!
+                    </p>
+                  </div>
+                )}
+                {stagePage === 2 && (
+                  <div className="space-y-3 sm:space-y-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-purple-900">Learn More About God 🤔</h3>
+                    <div className="space-y-2 text-sm sm:text-base text-gray-700">
                       <p><strong>God is eternal:</strong> He has always existed and will always exist. He never had a beginning!</p>
                       <p><strong>God is all-powerful:</strong> Nothing is too hard for God. He can do anything He wants.</p>
                       <p><strong>God is all-knowing:</strong> God knows everything—even your thoughts! Nothing surprises Him.</p>
                       <p><strong>God is loving:</strong> God's love is bigger than we can imagine. But His love is also holy and just.</p>
                     </div>
+                  </div>
+                )}
+                <div className="flex gap-2 mt-4 justify-between">
+                  {stagePage > 0 && (
+                    <button onClick={prevPage} className="px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500">
+                      ← Back
+                    </button>
+                  )}
+                  {stagePage > 0 && stagePage < 2 && (
+                    <button onClick={nextPage} className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">
+                      Next →
+                    </button>
+                  )}
+                  {stagePage === 0 && (
+                    <button onClick={nextPage} className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 ml-auto">
+                      Next →
+                    </button>
+                  )}
+                  {stagePage === 2 && (
+                    <button onClick={nextStage} className="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 flex items-center gap-2 ml-auto">
+                      Continue <ChevronRight />
+                    </button>
                   )}
                 </div>
-
-                <button
-                  onClick={nextStage}
-                  className="w-full px-6 py-3 bg-purple-600 text-white hover:bg-purple-700 transition-all border-2 border-purple-700 rounded"
-                >
-                  Continue <ChevronRight />
-                </button>
               </div>
             </div>
           </div>
