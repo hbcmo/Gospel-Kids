@@ -211,8 +211,8 @@ export default function Page() {
         )}
       </button>
 
-      <div className="container mx-auto px-4 py-4 sm:py-8 max-w-4xl">
-        <div className="mb-8">
+      <div className="container mx-auto px-4 py-2 sm:py-4 max-w-4xl">
+        <div className="mb-4">
           <div className="flex justify-between mb-2 text-xs sm:text-sm font-bold text-purple-800 gap-1">
             <span>God</span>
             <span>Me</span>
