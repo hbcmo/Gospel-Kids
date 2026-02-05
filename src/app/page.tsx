@@ -66,11 +66,11 @@ const JesusScene = () => (
       <path d="M 210 120 L 320 120 L 320 160 L 180 160 Z" />
       <path d="M 0 160 L 320 160" />
     </g>
-    <g stroke="#111827" strokeWidth="3" fill="none" strokeLinecap="round">
-      <path d="M 160 90 L 160 195">
+    <g stroke="#8B5A2B" strokeWidth="4" fill="none" strokeLinecap="round">
+      <path d="M 160 80 L 160 220">
         <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
       </path>
-      <path d="M 110 120 L 210 120">
+      <path d="M 105 120 L 215 120">
         <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
       </path>
     </g>
@@ -91,9 +91,9 @@ const InvitationScene = () => (
         <animate attributeName="stroke-dashoffset" from="0" to="12" dur="1.5s" repeatCount="indefinite" />
       </path>
     </g>
-    <g stroke="#111827" strokeWidth="3" fill="none" strokeLinecap="round">
-      <path d="M 160 90 L 160 195" />
-      <path d="M 110 120 L 210 120" />
+    <g stroke="#8B5A2B" strokeWidth="4" fill="none" strokeLinecap="round">
+      <path d="M 160 80 L 160 220" />
+      <path d="M 105 120 L 215 120" />
     </g>
     <g transform="translate(208,58)" stroke="#111827" strokeWidth="2" fill="none" strokeLinecap="round">
       <circle cx="20" cy="8" r="6" />
@@ -116,11 +116,11 @@ const PrayerScene = () => (
       <path d="M 210 120 L 320 120 L 320 160 L 180 160 Z" />
       <path d="M 0 160 L 320 160" />
     </g>
-    <g stroke="#111827" strokeWidth="3" fill="none" strokeLinecap="round">
-      <path d="M 160 90 L 160 195">
+    <g stroke="#8B5A2B" strokeWidth="4" fill="none" strokeLinecap="round">
+      <path d="M 160 80 L 160 220">
         <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
       </path>
-      <path d="M 110 120 L 210 120">
+      <path d="M 105 120 L 215 120">
         <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
       </path>
     </g>
